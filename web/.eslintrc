@@ -1,0 +1,57 @@
+
+{
+  "extends": [
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "airbnb-base",
+    "airbnb-typescript/base",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jest/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["react", "@typescript-eslint", "jest"],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "linebreak-style":[ "off"],
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "no-param-reassign": ["off"],
+    "react/react-in-jsx-scope": ["off"],
+        "react/jsx-uses-react": ["off"],
+        "react/jsx-props-no-spreading": ["warn"],
+        "react/no-unescaped-entities": ["off"],
+        "import/no-extraneous-dependencies": ["off"],
+        "max-len": ["off"],
+        "react/function-component-definition": ["off"],
+        "simple-import-sort/imports": ["error", {
+            "groups": [
+              ["^react"],
+              ["^antd"],
+              ["^@?\\w"],
+              ["@/(.*)"],
+              ["^[./]"]
+            ]
+          }]
+  }
+}
